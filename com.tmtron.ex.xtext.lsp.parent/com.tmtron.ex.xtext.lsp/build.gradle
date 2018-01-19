@@ -4,6 +4,9 @@ dependencies {
 	testCompile "org.eclipse.xtext:org.eclipse.xtext.xbase.testing:${xtextVersion}"
 	compile "org.eclipse.xtext:org.eclipse.xtext:${xtextVersion}"
 	compile "org.eclipse.xtext:org.eclipse.xtext.xbase:${xtextVersion}"
+	
+	// just to check if we can use this in a model for the LSP
+	compile "org.immutables:value:2.5.6:annotations"
 }
 configurations {
 	mwe2 {
