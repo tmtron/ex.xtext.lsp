@@ -10,8 +10,8 @@ jdk:
 
 # make gradlew executable: see http://stackoverflow.com/a/33820642/6287240
 before_install:
- - chmod +x com.tmtron.ex.xtext.lsp.parent/gradlew
- - chmod +x .tmtron.ex.xtext.lsp-use/gradlew
+ - chmod +x ./com.tmtron.ex.xtext.lsp.parent/gradlew
+ - chmod +x ./lsp-use/gradlew
 
 # see https://docs.travis-ci.com/user/languages/java/
 before_cache:
