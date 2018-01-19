@@ -1,0 +1,33 @@
+sudo: false
+
+language: java
+
+# validate this file online: http://lint.travis-ci.org/
+
+# see https://medium.com/@nicole_a_tesla/how-i-made-travis-ci-gradle-work-5c7a540ef639
+jdk:
+  - oraclejdk8          # tells Travis to use Java 8
+
+# make gradlew executable: see http://stackoverflow.com/a/33820642/6287240
+before_install:
+ - chmod +x com.tmtron.ex.xtext.lsp.parent/gradlew
+ - chmod +x .tmtron.ex.xtext.lsp-use/gradlew
+
+# see https://docs.travis-ci.com/user/languages/java/
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+# see https://docs.travis-ci.com/user/customizing-the-build/#Skipping-the-Installation-Step
+install: true
+
+# see https://docs.travis-ci.com/user/customizing-the-build/#Customizing-the-Build-Step
+script:
+- cd com.tmtron.ex.xtext.lsp.parent && gradle build
+- cd ../lsp-use && gradle build
+
+    
