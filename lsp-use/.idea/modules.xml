@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lsp-use.iml" filepath="$PROJECT_DIR$/.idea/modules/lsp-use.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lsp-use_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lsp-use_main.iml" group="lsp-use" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lsp-use_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lsp-use_test.iml" group="lsp-use" />
+    </modules>
+  </component>
+</project>

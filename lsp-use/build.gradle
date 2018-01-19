@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        /* xtext-gradle-plugin
+         * https://plugins.gradle.org/plugin/org.xtext.builder
+         */
+        classpath 'org.xtext:xtext-gradle-plugin:1.0.20'
+    }
+}
+
+group 'com.tmtron.ex.xtext.lsp.use'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.xtext.builder'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    xtextLanguages files('../com.tmtron.ex.xtext.lsp.parent/com.tmtron.ex.xtext.lsp/build/libs/com.tmtron.ex.xtext.lsp-1.0.0-SNAPSHOT.jar')
+    // xtextLanguages 'com.tmtron.dsl.domain:com.tmtron.dsl.domain:1.0.0-SNAPSHOT'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+xtext {
+    version = '2.13.0'
+    languages {
+        exdsl {
+            setup = 'com.tmtron.ex.xtext.lsp.ExDslStandaloneSetup'
+            generator {
+                //whether to generate @SuppressWarnings("all"), enabled by default
+                suppressWarningsAnnotation = false
+                //whether to generate the @Generated annotation, disabled by default
+                generatedAnnotation {
+                    active = true
+                    comment = "Copyright TMTron"
+                    includeDate = true
+                }
+                outlet.producesJava = true
+            }
+        }
+    }
+}

@@ -1,0 +1,3 @@
+el aString java.lang.String
+el anObject java.lang.Object
+el myType com.tmtron.ex.xtext.lsp.use.MyCustomType
