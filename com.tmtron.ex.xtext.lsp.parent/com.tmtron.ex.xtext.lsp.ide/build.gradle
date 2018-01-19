@@ -21,3 +21,13 @@ shadowJar {
 	classifier = 'ls'
 	append('plugin.properties')
 }
+
+task explode(type: Copy) {
+    final zipFile = file("${buildDir}/distributions/com.tmtron.ex.xtext.lsp.ide-1.0.0-SNAPSHOT.zip")
+    final outputDir = file("${buildDir}/lsp/")
+ 
+    from zipTree(zipFile)
+    into outputDir
+}
+
+build.finalizedBy explode
