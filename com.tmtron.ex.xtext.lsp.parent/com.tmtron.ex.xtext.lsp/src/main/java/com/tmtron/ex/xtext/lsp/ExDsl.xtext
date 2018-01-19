@@ -1,0 +1,9 @@
+grammar com.tmtron.ex.xtext.lsp.ExDsl with org.eclipse.xtext.common.Terminals
+
+generate exDsl "http://www.tmtron.com/ex/xtext/lsp/ExDsl"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
