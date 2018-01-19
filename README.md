@@ -34,6 +34,6 @@ Note, that the error is just shown in the editor. The DSL generation works fine.
 
 Links:
 
-* Xtext forums: [LSP: resolving types](https://www.eclipse.org/forums/index.php/m/1780255/#msg_1780255)
+* Xtext forum discussion: [LSP: resolving types](https://www.eclipse.org/forums/index.php/m/1780255/#msg_1780255)
 * xtext-core issue #159: [LanguageServer Provide basic java project concept](https://github.com/eclipse/xtext-core/issues/159)
 * xtext-core issue #589:[LSP getImplicitImports isn't working as expected](https://github.com/eclipse/xtext-core/issues/589)
