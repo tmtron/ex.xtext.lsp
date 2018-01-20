@@ -27,7 +27,7 @@ install: true
 
 # see https://docs.travis-ci.com/user/customizing-the-build/#Customizing-the-Build-Step
 script:
-- cd com.tmtron.ex.xtext.lsp.parent && gradle build
-- cd ../lsp-use && gradle build
+- cd com.tmtron.ex.xtext.lsp.parent && gradle build --console plain
+- cd ../lsp-use && gradle build --console plain
 
     

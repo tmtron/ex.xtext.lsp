@@ -5,6 +5,8 @@ The repository contains 2 projects:
 * `com.tmtron.ex.xtext.lsp.parent`: contains the (Eclipse) xtext-projects, including the language server
 * `lsp-use`: a simple (IntelliJ IDEA) project that uses the language and language server
 
+[![Build Status](https://travis-ci.org/tmtron/ex.xtext.lsp.svg?label=travis)](https://travis-ci.org/tmtron/ex.xtext.lsp/builds) 
+
 ## Building the DSL: 
 
 * just execute `gradlew build` in `com.tmtron.ex.xtext.lsp.parent/`
